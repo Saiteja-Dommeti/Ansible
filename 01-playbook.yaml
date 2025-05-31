@@ -1,0 +1,9 @@
+- name: ping the server 
+  hosts: frontend
+  tasks: #list of tasks
+  - name: ping the server
+    ansible.builtin.ping:
+      data: "Hello World"
+  - name: print the message
+    ansible.builtin.debug:
+      msg: "Hello World"
