@@ -1,4 +1,4 @@
-- name: Hello world playbook
+- name: Hello world 
   hosts: local # This playbook runs on the local machine
   connections: local # NO need servers NOte that this is a comment
   tasks:
