@@ -1,0 +1,18 @@
+- name: playbook level variables 
+  hosts: local 
+  connection: local
+  vars:
+     COURSE_NAME: "Ansible Course"
+     COURSE_VERSION: "1.0"
+     DURATION: "15 hours"
+     TRAINER: "SAITEJA"
+  tasks:
+  - name : print course information 
+    ansible.builtin.debug:
+    #vars reference should be surronded by ""
+      msg: "Hello from {{ COURSE_NAME }} version {{ COURSE_VERSION }}. The course duration is {{ DURATION }} and the trainer is {{ TRAINER }}."
+  
+  - name: print course information again 
+    ansible.builtin.debug:
+    #vars reference should be surronded by ""
+      msg: "Hello from {{ COURSE_NAME }}, course_version: {{ COURSE_VERSION}}, duration:{{ DURATION}}, trainer :{{ TRAINER}} "
