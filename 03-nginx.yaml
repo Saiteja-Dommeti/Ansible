@@ -1,0 +1,13 @@
+- name: nginx install and Run 
+  hosts: frontend
+  become: yes # This playbook requires root privileges
+  tasks:
+    - name: install ngnix server
+      ansible.builtin.package:
+        name: nginx
+        state: present
+    - name: strart nginx service
+      ansible.builtin.server:
+        name: nginx
+        state: started
+        enabled: yes
