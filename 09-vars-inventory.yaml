@@ -1,5 +1,4 @@
 - name: variables from inventory
-  # This playbook uses variables defined in the inventory file
   hosts: local 
   connection: local
   tasks: 
