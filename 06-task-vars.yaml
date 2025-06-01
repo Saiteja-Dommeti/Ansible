@@ -2,7 +2,7 @@
   hosts: local
   connection: local 
   vars: 
-    COURSE: DevSecOps
+    COURSE_NAME: DevSecOps
     VERSION: 1.0
     DURATION: 15 hours
     TRAINER: SAITEJA
