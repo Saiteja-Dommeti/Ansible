@@ -1,3 +1,15 @@
 - name: Hello world playbook
   hosts: local hosts
   connections: local # NO need servers NOte that this is a comment
+  tasks:
+    - name: ping the server
+      ansible.builtin.ping:
+        data: "Hello World"
+    - name: print the message
+      ansible.builtin.debug:
+        msg: "Hello World"
+    - name: print the message with a variable
+      ansible.builtin.debug:
+        msg: "{{ my_message }}"
+      vars:
+        my_message: "Hello World from a variable"
