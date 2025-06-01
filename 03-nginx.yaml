@@ -7,7 +7,7 @@
         name: nginx
         state: present
     - name: strart nginx service
-      ansible.builtin.server:
+      ansible.builtin.service:
         name: nginx
         state: started
         enabled: yes
