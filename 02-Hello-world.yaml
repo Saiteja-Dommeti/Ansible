@@ -1,0 +1,3 @@
+- name: Hello world playbook
+  hosts: local hosts
+  connections: local # NO need servers NOte that this is a comment
