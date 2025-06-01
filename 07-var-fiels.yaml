@@ -1,0 +1,10 @@
+- name: variables from files 
+  hosts: local
+  connection: local
+  vars_files:
+    - course.yaml
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
+      # vars reference should be surronded by ""
+        msg: "Hello from {{ COURSE_NAME }} version {{ VERSION }}. The course duration is {{ DURATION }} and the trainer is {{ TRAINER }}." 
