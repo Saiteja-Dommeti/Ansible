@@ -15,10 +15,9 @@
         msg: "Hello {{ username }}. Your password is {{ PASSWORD }}."
       
   vars_prompt:
-  - NUMBER: Enter a number
   - name: number
     prompt: Enter the number
-    private: true 
+    private: false 
   tasks:
   - name: print if the number is less than or equal to 100
     ansible.builtin.debug:
