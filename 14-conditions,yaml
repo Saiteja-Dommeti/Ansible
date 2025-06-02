@@ -1,0 +1,25 @@
+- name: conditions demo
+  hosts: local
+  connection: local
+  vars: 
+    NUMBER: 78
+  tasks:
+  - name: print if the number is less than or equal to 100
+    ansible.builtin.debug:
+      msg: "Given number {{ NUMBER }} is less than or equal to 100"
+    when: NUMBER <= 100
+
+    -name: print if the number is greater than 100 
+     ansible.builtin.debug:
+      msg: "Given number {{ NUMBER}}is greater than 100"
+    when: NUMBER > 100
+  
+  - name: print if the number is even
+    ansible.builtin.debug:
+      msg: "Given number {{ NUMBER }} is even"
+    when: NUMBER % 2 == 0
+
+  - name: print if the number is odd  
+    ansible.builtin.debug:
+      msg: "Given number {{ NUMBER }} is odd"
+    when: NUMBER % 2 != 0
