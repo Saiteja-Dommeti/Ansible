@@ -1,5 +1,5 @@
 - name: Ansible datatypes
-  hosta: local
+  hosts: local
   connection: local
   vars:
     DURATION: 120 #this is a number
