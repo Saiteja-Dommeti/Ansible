@@ -1,4 +1,6 @@
-COURSE_NAME: DevSecOps
+COURSE: DevSecOps
 VERSION: 1.0
 DURATION: 15 hours
 TRAINER: SAITEJA
+LOCATION: Remote
+# - name: variables from inventory
