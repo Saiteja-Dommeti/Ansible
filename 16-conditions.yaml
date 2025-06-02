@@ -1,5 +1,5 @@
 - name: playbooks running with facts
-  hosts : Frontend
+  hosts : frontend
   become: yes
   tasks:
   - name: install nginx if RedHat
