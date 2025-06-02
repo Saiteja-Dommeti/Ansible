@@ -15,7 +15,7 @@
       CD: gitlab
       SCRIPTING: bash,SHELL,python
   tasks:
-  - name: print the  course details 
+  - name: print the  content
     ansible.builtin.debug:
       msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}, Is Live: {{ IS_LIVE }}, Tools: {{ Tools }}, Concepts: {{ CONCEPTS }}"
   
