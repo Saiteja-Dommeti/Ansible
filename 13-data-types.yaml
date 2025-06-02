@@ -1,0 +1,22 @@
+- name: Ansible datatypes
+  hosta: local
+  connection: local
+  vars:
+    DURATION: 120 #this is a number
+    COURSE: "DevSecOps" #this is a string
+    TRAINER: "SAITEJA" #this is a string
+    IS_LIVE: true #this is a boolean
+    Tools: #this is a list
+    - Ansible
+    - Docker
+    - Kubernetes
+    CONCEPTS: #this is a dictionary
+      CI: jenkins
+      CD: gitlab
+      SCRIPTING: bash,SHELL,python
+  tasks:
+  - name: print the  course details 
+    ansible.builtin.debug:
+      msg: "Course: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}, Is Live: {{ IS_LIVE }}, Tools: {{ Tools }}, Concepts: {{ CONCEPTS }}"
+  
+      
