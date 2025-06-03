@@ -1,5 +1,5 @@
 - name: shell vs command 
-  hosts: local 
+  hosts: frontend
   tasks: 
   - name: redirect ouput to file 
     #ansible.builtin.command: "ls -ltr > /tmp/output.txt"
